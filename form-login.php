@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!doctype php>
+<php lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -29,9 +29,9 @@
         </div>
 
         
-        <a href="home.html" button type="submit" class="btn btn-primary">Log in</a>
+        <a href="home.php" button type="submit" class="btn btn-primary">Log in</a>
       </form>
     </div>
 
   </body>
-</html>
+</php>

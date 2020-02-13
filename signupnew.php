@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="form-login.css"> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script defer src="script.js"></script>
 
     <title>Sign Up</title>
   </head>
@@ -18,32 +18,26 @@
     <div class="container">
       <h2 class="text mt-5">Registration</h2>
 
-      <form>
+      <div id="error"></div>
+      <form id="form" action="#" method="POST">
         <div class="form-group mt-5">
-          <label>Full Name</label>
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" name="firstName" class="form-control " placeholder="Input First Name">
-            </div>
-            <div class="col-md-6">
-              <input type="text" name="lastName" class="form-control " placeholder="Input Last Name">
-            </div>
-          </div>
+          <label for="name">Full Name</label>
+          <input id="name" type="text" name="name" class="form-control " placeholder="Input Full Name">
         </div>
 
         <div class="form-group">
-          <label>Email</label>
-          <input type="text" name="email" class="form-control col-sm-12 " placeholder="Input Email">
+          <label for="email">Email</label>
+          <input id="email" type="text" name="email" class="form-control col-sm-12 " placeholder="Input Email">
         </div>
 
         <div class="form-group">
-          <label>Username</label>
-          <input type="text" name="username" class="form-control col-sm-12 " placeholder="Input Username">
+          <label for="username">Username</label>
+          <input id="username" type="text" name="username" class="form-control col-sm-12 " placeholder="Input Username">
         </div>
 
         <div class="form-group">
-          <label>Password</label>
-          <input type="password" name="password" class="form-control" placeholder="Input Password">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" class="form-control" placeholder="Input Password">
         </div>
 
         <!-- <div class="form-group">
@@ -86,7 +80,7 @@
         </div>
  -->
         <br>
-        <a href="form-login.php" button type="submit" class="btn btn-primary mb-5">Sign Up</a>
+        <button type="submit" onclick="validate()" class="btn btn-primary mb-5">Sign Up</button>
         <button type="reset" class="btn btn-danger mb-5">Reset</button>
       </form>
     </div>
